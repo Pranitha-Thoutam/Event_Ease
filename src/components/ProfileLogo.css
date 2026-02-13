@@ -1,0 +1,13 @@
+.profile-logo {
+    display: inline-block; /* Allows it to sit inline with other elements */
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Hides any part of the image that goes outside the circle */
+}
+
+.profile-logo img {
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}

@@ -1,0 +1,41 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a90e2" />
+      <stop offset="100%" stop-color="#50e3c2" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#gradient)" />
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="100" r="50" fill="rgba(255, 255, 255, 0.1)" />
+  <circle cx="1000" cy="300" r="70" fill="rgba(255, 255, 255, 0.1)" />
+  <circle cx="600" cy="50" r="30" fill="rgba(255, 255, 255, 0.1)" />
+  
+  <!-- Contact icons -->
+  <g transform="translate(300, 200)">
+    <!-- Envelope -->
+    <rect x="0" y="0" width="80" height="60" rx="10" fill="white" opacity="0.9" />
+    <path d="M10,20 L40,40 L70,20" stroke="#4a90e2" stroke-width="3" fill="none" />
+    <path d="M10,40 L40,20 L70,40" stroke="#4a90e2" stroke-width="3" fill="none" />
+  </g>
+  
+  <g transform="translate(500, 200)">
+    <!-- Phone -->
+    <circle cx="40" cy="30" r="30" fill="white" opacity="0.9" />
+    <path d="M30,20 L50,20 L50,40 L30,40 Z" fill="#4a90e2" />
+    <path d="M35,25 L45,25" stroke="#4a90e2" stroke-width="2" />
+  </g>
+  
+  <g transform="translate(700, 200)">
+    <!-- Location pin -->
+    <path d="M40,10 C40,10 60,30 60,50 C60,65 50,75 40,75 C30,75 20,65 20,50 C20,30 40,10 40,10 Z" fill="white" opacity="0.9" />
+    <circle cx="40" cy="50" r="10" fill="#4a90e2" />
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">Contact Us</text>
+  <text x="600" y="380" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">We're here to help with any questions you may have</text>
+</svg> 

@@ -1,0 +1,163 @@
+.navbar {
+  background: linear-gradient(to right, #2c3e50, #4a69bd); /* Darker blue/grey gradient */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid var(--text-light);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid transparent; /* Ensure consistent border for transitions */
+}
+
+.nav-button.login {
+  background-color: var(--background-white);
+  color: #2c3e50; /* Darker text for login button */
+  border-color: var(--background-white);
+}
+
+.nav-button.login:hover {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.nav-button.signup {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border-color: var(--accent-color);
+}
+
+.nav-button.signup:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.nav-button.logout {
+  background-color: var(--error-color);
+  color: var(--text-light);
+  border-color: var(--error-color);
+}
+
+.nav-button.logout:hover {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+/* Hide mobile-only buttons on desktop */
+.nav-button.mobile-only {
+  display: none;
+}
+
+/* Hide desktop-only buttons on mobile */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: linear-gradient(to bottom, #2c3e50, #4a69bd); /* Darker gradient for mobile menu */
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 0;
+  }
+
+  /* Show mobile-only buttons on mobile */
+  .nav-button.mobile-only {
+    display: block;
+    width: fit-content; /* Adjust width as needed */
+    margin: 0.5rem auto; /* Center the buttons */
+  }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1200" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#2c3e50" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#bg-gradient)" />
+  
+  <!-- Travel elements -->
+  <circle cx="300" cy="300" r="150" fill="#4CAF50" opacity="0.3" />
+  <circle cx="900" cy="300" r="150" fill="#4CAF50" opacity="0.3" />
+  
+  <!-- Airplane -->
+  <path d="M400 200 L600 200 L550 250 L450 250 Z" fill="white" />
+  <path d="M500 150 L550 200 L500 250 Z" fill="white" />
+  <path d="M450 225 L350 225 L400 250 L450 250 Z" fill="white" />
+  <path d="M550 225 L650 225 L600 250 L550 250 Z" fill="white" />
+  
+  <!-- Hotel -->
+  <path d="M700 100 L900 100 L900 350 L700 350 Z" fill="white" opacity="0.7" />
+  <rect x="750" y="150" width="60" height="40" fill="#4CAF50" opacity="0.8" />
+  <rect x="850" y="150" width="60" height="40" fill="#4CAF50" opacity="0.8" />
+  <rect x="750" y="220" width="60" height="40" fill="#4CAF50" opacity="0.8" />
+  <rect x="850" y="220" width="60" height="40" fill="#4CAF50" opacity="0.8" />
+  <rect x="800" y="300" width="60" height="50" fill="#4CAF50" opacity="0.8" />
+  
+  <!-- Beach -->
+  <path d="M100 400 L1100 400 L1000 500 L200 500 Z" fill="#4CAF50" opacity="0.5" />
+  <path d="M200 450 L1000 450 L900 500 L300 500 Z" fill="white" opacity="0.3" />
+  
+  <!-- Text -->
+  <text x="600" y="100" font-family="Arial" font-size="72" font-weight="bold" fill="white" text-anchor="middle">EventEase</text>
+  <text x="600" y="170" font-family="Arial" font-size="36" fill="white" text-anchor="middle">Your journey begins here</text>
+  <text x="600" y="220" font-family="Arial" font-size="24" fill="white" text-anchor="middle">Discover amazing destinations, book flights, and find the perfect stay</text>
+</svg> 

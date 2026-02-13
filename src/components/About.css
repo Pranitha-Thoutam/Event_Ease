@@ -1,0 +1,350 @@
+/* src/components/About.css */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background-color: var(--background-light);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3.5rem 2rem;
+    background: linear-gradient(135deg, var(--primary-blue-light), var(--primary-blue));
+    color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    transform: rotate(45deg);
+    opacity: 0.3;
+}
+
+.about-header h1 {
+    color: var(--white);
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-header p {
+    color: var(--white);
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.about-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.about-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.about-card h2 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.about-card h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.about-card p {
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.about-image-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin: 5rem 0;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--border-color);
+}
+
+.image-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: var(--white);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.image-card:hover .image-overlay {
+    transform: translateY(0%);
+}
+
+.image-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.image-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.team-section {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid var(--border-color);
+}
+
+.team-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-image {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.team-info h3 {
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.team-info p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.contact-section {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, var(--accent-color-light), var(--accent-color));
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-section h2 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section p {
+    color: var(--white);
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: var(--white);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1.5rem;
+    }
+
+    .about-header {
+        padding: 2.5rem 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+
+    .about-grid,
+    .about-image-section,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .image-card img {
+        height: 250px;
+    }
+
+    .image-overlay h3 {
+        font-size: 1.4rem;
+    }
+
+    .image-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .team-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .team-image {
+        height: 200px;
+    }
+
+    .contact-section {
+        padding: 2.5rem 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .contact-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+    }
+
+    .contact-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+.why-choose-us-section {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.why-choose-us-section h2 {
+    color: var(--primary-blue);
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.choose-us-grid .about-card {
+    /* Inherits styling from .about-card, add specific overrides if needed */
+}
