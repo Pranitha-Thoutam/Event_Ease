@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/api';
 import './ForgotPassword.css';
 
@@ -7,7 +6,6 @@ const ForgotPassword = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  // const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,12 +33,15 @@ const ForgotPassword = () => {
             required
           />
         </div>
-        <button type="submit" className="reset-button">Send Reset Link</button>
+        <button type="submit" className="reset-button">
+          Send Reset Link
+        </button>
       </form>
+
       {message && <p className="success-message">{message}</p>}
       {error && <p className="error-message">{error}</p>}
     </div>
   );
 };
 
-export default ForgotPassword; 
+export default ForgotPassword;
