@@ -29,7 +29,7 @@ const Booking = () => {
       try {
         const eventData = await eventService.getById(eventId);
         setEvent(eventData);
-        setTotalPrice(eventData.price * formData.numberOfTickets); // Calculate initial total price
+        // setTotalPrice(eventData.price * formData.numberOfTickets); // Calculate initial total price
       } catch (err) {
         setError("Failed to load event details.");
         console.error("Error fetching event details:", err);
